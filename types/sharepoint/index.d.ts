@@ -17,7 +17,7 @@ declare function ExecuteOrDelayUntilBodyLoaded(initFunc: () => void): void;
 declare function ExecuteOrDelayUntilScriptLoaded(func: () => void, depScriptFileName: string): boolean;
 declare function ExecuteOrDelayUntilEventNotified(func: (...args: any[]) => void, eventName: string): boolean;
 declare var Strings: any;
-declare const enum Sods {
+declare enum Sods { // remove const Ambient const enums are not allowed when the '--isolatedModules' flag is provided and babel 7
     missing =  1,
     loading = 2,
     pending = 3,
